@@ -1,0 +1,22 @@
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <title>getgps</title>
+
+    <script>
+
+      function doFunction(){
+      navigator.geolocation.getCurrentPosition((position) => {
+      document.getElementById("pgps").innerHTML="${position.coords.latitude} ${position.coords.longitude}"
+      });
+      }
+    </script>
+  </head>
+
+  <body style="margin: 0; overflow: hidden;">
+    <p>Valor gps:</p>
+    <p id="pgps"></p>
+<input id="clickMe" type="button" value="aggiorna gps" onclick="doFunction();" />
+  </body>
+</html>
