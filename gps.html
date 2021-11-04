@@ -8,7 +8,7 @@
 
       function doFunction(){
       navigator.geolocation.getCurrentPosition((position) => {
-      document.getElementById("pgps").innerHTML="${position.coords.latitude} ${position.coords.longitude}"
+      document.getElementById("pgps").innerHTML=""+ position.coords.latitude + " " +position.coords.longitude;
       });
       }
     </script>
